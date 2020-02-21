@@ -19,3 +19,10 @@ I'm using a KeyboardIn DAT to simulate the sensors at the moment.  When you pres
 ### video output
 
 At the moment, I'm only outputting two video clips to make it simpler to test with.  I'm using a Layout TOP to place the clips side-by-side, but depending on the size / positioning of the clips another TOP might be preferable.  This currently ignores the fact that we will be using separate video device outputs.
+
+
+## 2. screens
+
+This is a basic demonstration of how to select different video outputs for different video files in TouchDesigner.  This project consists of two moviefilein TOPs, each of which is connected to a window component.  You can set which monitor each window opens, and whether each window opens as a Perform window (i.e. main window) or a separate window.  When you enter Perform mode, one window will open on each monitor.  As above, the file paths for the video files are specific to my machine, so you'll have to edit the TOPs to point to the correct file on your computer.  
+
+The way this project is set up to work is if you press and hold the 1 key, it will enter perform mode, and set each window to the proper monitor.  The logic for this is happening in the CHOP Execute DAT.  When it detects a signal (i.e. the 1 key is pressed down), it sets the Monitor property of each window component, sets window1 to be the Perform window, and then opens both windows.  When you release the 1 key, it closes both windows.  
