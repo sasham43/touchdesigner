@@ -26,3 +26,8 @@ At the moment, I'm only outputting two video clips to make it simpler to test wi
 This is a basic demonstration of how to select different video outputs for different video files in TouchDesigner.  This project consists of two moviefilein TOPs, each of which is connected to a window component.  You can set which monitor each window opens, and whether each window opens as a Perform window (i.e. main window) or a separate window.  When you enter Perform mode, one window will open on each monitor.  As above, the file paths for the video files are specific to my machine, so you'll have to edit the TOPs to point to the correct file on your computer.  
 
 The way this project is set up to work is if you press and hold the 1 key, it will enter perform mode, and set each window to the proper monitor.  The logic for this is happening in the CHOP Execute DAT.  When it detects a signal (i.e. the 1 key is pressed down), it sets the Monitor property of each window component, sets window1 to be the Perform window, and then opens both windows.  When you release the 1 key, it closes both windows.  
+
+
+## 3. audio
+
+This is the simplest project.  Same caveats about the file path being specific to my computer.  This is just to demonstrate that you can send three different audio files to three different output devices simultaneously.  I was able to use my computer speakers, the JBL Flip 4, and my own bluetooth speaker all at the same time.  To run this on your computer, you'll probably need to select the Device parameter of the various Audio Device Out CHOPs.  
