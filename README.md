@@ -1,7 +1,7 @@
 # touchdesigner
 
 
-## navigation
+## 1. navigation
 
 This is a basic example of how to navigate through video clips.  I'm still getting used to how to control state and data flow in TouchDesigner, so a lot of my solutions are very 'manual' using python.  I'm also working with JSON-style objects because that is what I'm used to doing at work and in other projects.  This file consists of three main components: data storage, keypress handling, and video output.
 
